@@ -22,3 +22,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# EA3 - conexionBaseDatos
+*.db
+out/
+# el driver JDBC sí se sube para que el proyecto funcione al clonarlo
+!conexionBaseDatos/lib/*.jar
