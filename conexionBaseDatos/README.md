@@ -7,7 +7,6 @@ Programación Orientada a Objetos II (LEONARDO MONTES) - PREICA2602B020047
 javac -d out/ea3 $(find conexionBaseDatos -name "*.java")
 java -cp "out/ea3:conexionBaseDatos/lib/*" aplicacion.Main
 ```
-```
 
 
 ### Estructura del proyecto
