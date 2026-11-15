@@ -4,11 +4,9 @@ Programación Orientada a Objetos II (LEONARDO MONTES) - PREICA2602B020047
 ## EA2 – Procesamiento funcional
 
 ```bash
-mkdir -p out
-javac -d out procesamientoFuncional/modelo/RegistroValidador.java \
-  procesamientoFuncional/servicio/ProcesadorTransporteService.java \
-  procesamientoFuncional/aplicacion/Main.java
-java -cp out aplicacion.Main
+javac -d out/ea3 $(find conexionBaseDatos -name "*.java")
+java -cp "out/ea3:conexionBaseDatos/lib/*" aplicacion.Main
+```
 ```
 
 
@@ -36,3 +34,4 @@ La ventana **no sabe nada de JDBC**: solo lee los campos, llama al servicio y pi
 - El driver ya viene en `lib/sqlite-jdbc-3.46.1.3.jar`.
 
 > No se usa ningún framework: solo Java estándar (Swing + JDBC). JDBC (`java.sql`) es una API de interfaces; el `.jar` de `lib/` es el driver que la implementa para SQLite. Sin él aparece la `ClassNotFoundException`.
+
